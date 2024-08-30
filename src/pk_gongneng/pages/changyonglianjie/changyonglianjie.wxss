@@ -1,0 +1,35 @@
+/* pages/changyonglianjie/changyonglianjie.wxss */
+
+.hint-text {
+    font-size: 28rpx;
+    color: #cccccc;
+    text-align: center;
+}
+
+.content-name {
+    font-size: 28rpx;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: rgba(69, 82, 107, 1);
+    line-height: 20px;
+    margin-left: 8px;
+}
+
+  
+.right-card {
+    height: 60rpx !important;
+    width: 60rpx !important;
+    border-radius: 0rpx !important;
+}
+  
+.content {
+    margin-top: 15rpx;
+    color: gray;
+    font-size: 26rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+}
+

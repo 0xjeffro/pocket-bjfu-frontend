@@ -1,0 +1,8 @@
+<!--components/shadow-id/shadow-id.wxml-->
+<view class="shadow">
+    <van-row wx:for="{{24}}" wx:key="this">
+        <van-col span="3" wx:for="{{8}}" wx:key="this">
+            <view class="watermark">{{user_id}}</view>
+        </van-col>
+    </van-row>
+</view>

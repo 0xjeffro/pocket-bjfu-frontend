@@ -1,0 +1,20 @@
+<!--pages/mycontent/mycontent.wxml-->
+<view>
+  <index-content
+    wx:for="{{contentList}}" wx:key="id"
+    number="{{item.id}}"
+    openId="{{item.openId}}"
+    contentText="{{item.contentText}}"
+    contentImg="{{item.contentImg}}"
+    decorationUrl="{{item.decoration_url}}"
+    isLike="{{item.isLike}}"
+    isFav="{{item.isFav}}"
+    nComment="{{item.nComment}}"
+    nLike="{{item.nLike}}"
+    time="{{item.time}}"
+  ></index-content>
+  <l-loadmore show="{{true}}" type="{{loadType}}" loading-text="加载中..." end-text="没有啦">
+  </l-loadmore>
+  <view style="height: 20rpx;"></view>
+</view>  
+

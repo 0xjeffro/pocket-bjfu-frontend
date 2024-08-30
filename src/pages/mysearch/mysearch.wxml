@@ -1,0 +1,29 @@
+<!--pages/mysearch/mysearch.wxml-->
+<van-sticky>
+    <van-search
+        model:value="{{ searchValue }}"
+        placeholder="请输入帖子id或关键词"
+        focus="{{true}}"
+        bind:change="onChange"
+        bind:search="onSearch"/>
+</van-sticky>
+
+<view>
+  <index-content
+    wx:for="{{contentList}}" wx:key="id"
+    wx:if="{{item.state === '1'}}"
+    number="{{item.id}}"
+    openId="{{item.openId}}"
+    contentText="{{item.contentText}}"
+    contentImg="{{item.contentImg}}"
+    decorationUrl="{{item.decoration_url}}"
+    isLike="{{item.isLike}}"
+    isFav="{{item.isFav}}"
+    nComment="{{item.nComment}}"
+    nLike="{{item.nLike}}"
+    time="{{item.time}}"
+  ></index-content>
+  <l-loadmore show="{{loadingShow}}" type="{{loadType}}" loading-text="加载中..." end-text="没有啦">
+  </l-loadmore>
+  <view style="height: 20rpx;"></view>
+</view> 

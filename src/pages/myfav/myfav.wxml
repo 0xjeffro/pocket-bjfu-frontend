@@ -1,0 +1,6 @@
+<!--pages/myfav/myfav.wxml-->
+<retrieve-content
+    wx:for="{{contentList}}" wx:key="contentId"
+    number="{{item.contentId}}">
+</retrieve-content>
+<view style="height: 30rpx;"></view>

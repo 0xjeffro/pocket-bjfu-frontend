@@ -1,0 +1,74 @@
+/* components/retrieve-content/retrieve-content.wxss */
+
+@import "../../static/iconfont/iconfont-weapp-icon.wxss";
+@import "../../static/css/animate.wxss";
+
+.card{
+  width: 720rpx;
+  background: rgb(255, 255, 255);
+  border-radius: 14rpx;
+  box-shadow: 2px 2px 2px 1px #f3f3f3;
+  height: 100%;
+  padding: 30rpx 20rpx;
+}
+
+.row {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15rpx 0;
+  box-sizing: border-box;
+}
+  
+.option-row {
+  height: 44rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15rpx 0;
+  box-sizing: border-box;
+}
+  
+.title-font {
+  margin-left: 5rpx;
+  font-weight: 400;
+  font-size: 22rpx;
+  line-height: 48rpx;
+  color: #c0c4d0;
+  font-weight: 600;
+}
+.time-font {
+  margin-right: 30rpx;
+  font-weight: 400;
+  font-size: 22rpx;
+  line-height: 48rpx;
+  color: #c0c4d0;
+  font-weight: 600;
+}
+.content-font {
+  line-height: 180%;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  font-size: 29rpx;
+  /* letter-spacing: 1px; */
+  color: #000;
+  text-align: justify;
+  display: inline-block;
+  word-break:break-all;
+  /* font-weight: 300; */
+}
+.count-font {
+  line-height: 40rpx;
+  font-size: 20rpx;
+  height: 40rpx;
+  margin-left: 10rpx;
+  color:#c0c4d0
+}
+
+.hover-style {
+  opacity: 1;
+  background: #fafafa;
+}

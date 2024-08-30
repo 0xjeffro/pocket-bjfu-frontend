@@ -1,0 +1,79 @@
+<!--pages/index/detail/detail.wxml-->
+<detail-content number="{{id}}"></detail-content>
+<view class="row" style="padding-bottom: 0; padding-top: 0; height: 14rpx;"></view>
+<view class="row" style="padding-bottom: 0; padding-top: 0;">
+    <view class="comment-bar">
+        <text class="comment-bar-text">评论 {{nComment}}</text>
+    </view>
+</view>
+<van-divider hairline customStyle="margin: 0;"/>
+<view class="row" style="height: 100%; padding: 0;">
+  <view wx:if="{{nComment === 0}}" style="padding: 20rpx;">
+    <text style="color: #ccc;">看看下面~ 来发评论吧</text>
+  </view>
+  <view wx:if="{{nComment === '-'}}" style="padding: 20rpx;">
+    <text style="color: #ccc;">加载中...</text>
+  </view>
+</view>
+<!-- 评论列表 -->
+<view wx:for="{{deep1}}" wx:key="id">
+  <ad-comment-list wx:if="{{item.is_ad}}"></ad-comment-list>
+  <detail-comment
+    wx:if="{{ ! item.is_ad}}"
+    number="{{item.id}}"
+    isAuthor="{{item.isAuthor}}"
+    nickname="{{item.nickname}}"
+    time="{{item.time}}"
+    state="{{item.state}}"
+    deep="{{item.deep}}"
+    reply="{{item.reply}}"
+    commentText="{{item.commentText}}"
+    contentId="{{item.contentId}}"
+    isLike="{{item.isLike}}"
+    nLike="{{item.nLike}}"
+    action="{{item.action}}"
+    actionTo="{{item.actionTo}}"
+    comments="{{item.comments}}"
+  >
+  </detail-comment>
+</view>
+
+
+
+<view style="width: 100%; height: 200rpx;"></view>
+<van-tabbar z-index="9999">
+  <van-tabbar-item icon="edit" bindtap="writeComment" data-reply="-1" data-deep="1">评论</van-tabbar-item>
+  <van-tabbar-item icon="arrow" bindtap="nextOne">下一条</van-tabbar-item>
+</van-tabbar>
+
+
+<l-popup
+  wx:if="{{ writeCommentShow }}"
+  show="{{ writeCommentShow }}"
+  content-align="top"
+  bind:lintap="onClose"
+>
+  <view class="top-popup">
+    <view style="margin-top: 10rpx;">
+      <l-textarea
+        l-inner-class="textarea-text"
+        border="{{false}}" 
+        placeholder="{{placeholder}}"
+        model:value="{{commentText}}"
+        auto-height="{{true}}"
+        maxlength="300"
+        focus="{{true}}"/>
+    </view>
+    <van-divider hairline customStyle="margin: 0;"/>
+    <view style="width: 100%; margin: 20rpx;" class="popup-row">
+      <l-button l-class="send-button" shape="semicircle" catch:lintap="sendComment">发布</l-button>
+    </view>
+  </view>
+</l-popup>
+
+<l-toast />
+<no-ask-tip show="{{noAskTipShow}}" text="保持订阅，消息不错过"></no-ask-tip>
+
+
+<shadow-id></shadow-id>
+<shadow-ad></shadow-ad>

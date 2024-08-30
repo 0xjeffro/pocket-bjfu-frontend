@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "kcb-card": "../../components/kcb-card/kcb-card",
+    "jiaowunews-card": "../../components/jiaowunews-card/jiaowunews-card",
+    "kaoshinews-card": "../../components/kaoshinews-card/kaoshinews-card",
+    "shadow-id": "../../components/shadow-id/shadow-id"
+  },
+  "navigationBarBackgroundColor": "#f7f7f7",
+  "navigationBarTitleText": "林里校园"
+}

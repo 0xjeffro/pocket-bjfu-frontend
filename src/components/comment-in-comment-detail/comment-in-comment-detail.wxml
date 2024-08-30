@@ -1,0 +1,36 @@
+<!--components/comment-in-comment-detail/comment-in-comment-detail.wxml-->
+<view class="row">
+    <view class="card">
+        <!-- 身份标识 -->
+        <van-row>
+            <van-col span="12" offset="1">
+                <view style="height: 28rpx;">
+                    <text class="nickname-font">{{nickname}}</text>
+                    <text class="author-font">{{authorTag}}</text>
+                </view>
+            </van-col>
+        </van-row>
+        <!-- 内容 -->
+        <van-row><view style="width: 100%; height: 10rpx;"></view></van-row>
+        <van-row>
+            <van-col span="22" offset="1">
+                <text class="comment-font" bindtap="writeComment" wx:if="{{action !== ''}}">{{action + '  '}}</text>
+                <text class="comment-font" style="color: #208fd0" bindtap="writeComment" wx:if="{{action !== ''}}">{{' @' + actionTo}}</text>
+                <text class="comment-font" bindtap="writeComment" wx:if="{{action !== ''}}">：</text>
+                <text class="comment-font" bindtap="writeComment" bindlongpress="copyCommentText">{{state === '0' ? '内容涉嫌违规，系统自动屏蔽' : commentText}}</text>
+            </van-col>
+        </van-row>
+        <!-- 操作栏 -->
+        <van-row>
+            <van-col offset="1" span="21">
+                <view class="option-row">
+                    <view class="time-font">{{time}}</view>
+                    <view class="time-font" style="margin-left: 40rpx;" bindtap="writeComment">回复</view>
+                    <van-icon name="{{likeIcon}}" color="{{likeColor}}" size="24rpx" bindtap="likeClick" style="margin-left: 40rpx;" class='{{animationType}}'/>
+                    <view class="count-font" bindtap="likeClick">{{nLike_d}}</view>
+                </view>
+            </van-col>
+        </van-row>
+    </view>
+</view>
+<van-divider hairline dashed customStyle="margin: 0;"/>

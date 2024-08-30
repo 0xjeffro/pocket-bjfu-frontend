@@ -1,0 +1,42 @@
+<!--pages/xiaoli/xiaoli.wxml-->
+<view wx:if="{{! loadingFail}}">
+    <!-- 加载动画 -->
+    <l-loading
+        l-container-class="l-container"
+        bg-color="#f7f7f7"
+        z-index="776"
+        color="#5abe64"
+        size="large"
+        type="flash"
+        opacity="1"
+        show="{{loadingShow}}"
+        full-screen="{{true}}"
+        custom="{{false}}"
+    >
+    </l-loading>
+
+    <!-- 内容 -->
+    <view class="row" wx:for="{{imgList}}" wx:key="id">
+        <view class="card">
+            <view class="row-banner" style="width:100%; height: 80rpx;line-hright: 50rpx;">
+                <view class="light-block" style="margin-top: 30rpx;margin-left: 30rpx;"></view>
+                <text style="margin-left: 10rpx; line-height: 80rpx; font-size: 32rpx; font-weight: 600;">{{item.title}}</text>
+            </view>
+            <view class="row-image">
+                <image mode="widthFix" src="{{item.img}}" bindtap="preview" data-url="{{item.img}}"></image>
+            </view>
+            <view class="tip">点击图片可放大</view>
+        </view>
+    </view>
+
+    <view style="height: 70rpx;"></view>
+</view>
+
+<van-empty
+  class="custom-image"
+  image="https://img.yzcdn.cn/vant/empty-image-error.png"
+  description="请求超时"
+  wx:if="{{loadingFail}}"
+>
+    <l-button type="default" bindtap="loadData">重试</l-button>
+</van-empty>

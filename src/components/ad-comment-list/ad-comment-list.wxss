@@ -1,0 +1,9 @@
+/* components/ad-comment-list/ad-comment-list.wxss */
+
+.ad {
+    padding-top: 5rpx;
+    padding-bottom: 5rpx;
+    padding-left: 10rpx;
+    padding-right: 10rpx;
+    background-color: #fff;
+}

@@ -1,0 +1,15 @@
+{
+  "usingComponents": {
+    "l-icon": "lin-ui/icon/index",
+    "l-checkbox-group": "lin-ui/checkbox-group/index",
+    "l-checkbox": "lin-ui/checkbox/index",
+    "l-button": "lin-ui/button/index",
+    "content-card": "/components/content-card/content-card",
+    "l-loadmore": "lin-ui/loadmore/index",
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "l-toast": "lin-ui/toast/index"
+  },
+  "navigationBarBackgroundColor": "#f7f7f7",
+  "navigationBarTitleText": "空教室"
+}

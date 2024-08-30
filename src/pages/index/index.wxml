@@ -1,0 +1,65 @@
+<!--index.wxml-->
+<view>
+  <dot></dot>
+  <view class="row" style="height: 100rpx;margin-top:50rpx;width: 100%; align-items: center;">
+    <t-switch style="float: left; margin-left: 14rpx;"></t-switch>
+    <l-button
+      width="60" height="60"
+      l-class="send-button-text" bg-color="#d1eaf5"
+      style="margin-right: 10rpx; float: right;"
+      class="animated bounceInRight"
+      bindtap="toMySearch">
+      <l-icon name="research" color="#1989FA"/>
+    </l-button>
+    <l-button
+      width="60" height="60"
+      l-class="send-button-text" bg-color="#dcf1c0"
+      style="margin-right: 30rpx; float: right;"
+      class="animated bounceInUp"
+      bindtap="toMyContent">
+      <l-icon name="comment" color="#5c9b05"/>
+    </l-button>
+    <l-button 
+      width="60" height="60"
+      l-class="fav-button-text" bg-color="#fcefcf"
+      style="margin-right: 30rpx; float: right;"
+      class="animated bounceInLeft"
+      bindtap="toMyFav">
+      <l-icon name="favor" color="#ed6a0c"/>
+    </l-button>
+  </view>
+  <view class="row" style="height: 100%;margin-top:0rpx; margin-bottom: 10rpx; padding-top: 0; padding-bottom: 0rpx;width: 100%; align-items: center; justify-content: center;">
+    <view style="width: 690rpx; margin-left: 10rpx; border-radius: 14rpx; overflow: hidden;">
+        <notice component="index"></notice>
+    </view>
+  </view>
+  <view wx:for="{{ad_contentList}}" wx:key="id">
+    <index-content
+      wx:if="{{item.state === '1' && !item.is_ad}}"
+      number="{{item.id}}"
+      openId="{{item.openId}}"
+      contentText="{{item.contentText}}"
+      contentImg="{{item.contentImg}}"
+      decorationUrl="{{item.decoration_url}}"
+      isLike="{{item.isLike}}"
+      isFav="{{item.isFav}}"
+      nComment="{{item.nComment}}"
+      nLike="{{item.nLike}}"
+      time="{{item.time}}"
+    >
+    </index-content>
+    <ad-content-list wx:if="{{item.is_ad}}"></ad-content-list>
+  </view>
+  
+  
+  <l-loadmore show="{{true}}" type="{{loadType}}" loading-text="加载中..." end-text="没有啦">
+  </l-loadmore>
+  <view class="row" style="height: 100px;">
+  </view>
+</view>
+<l-message l-class="success-message" type="success" content="刷新成功" duration="900" show="{{successMessageShow}}"/>
+<l-toast />
+
+<shadow-id></shadow-id>
+<shadow-ad></shadow-ad>
+<content-actionsheet></content-actionsheet>

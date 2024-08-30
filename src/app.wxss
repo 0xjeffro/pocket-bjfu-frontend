@@ -1,0 +1,18 @@
+/**app.wxss**/
+@import '/static/iconfont/iconfont-weapp-icon.wxss';
+@import "colorui/main.wxss";
+@import "colorui/icon.wxss";
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  box-sizing: border-box;
+} 
+
+page {
+  background: #f7f7f7;
+}  

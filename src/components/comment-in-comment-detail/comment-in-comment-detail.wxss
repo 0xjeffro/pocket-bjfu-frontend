@@ -1,0 +1,80 @@
+/* components/comment-in-comment-detail/comment-in-comment-detail.wxss */
+@import "../../static/css/animate.wxss";
+
+.card{
+    width: 750rpx;
+    background: rgb(255, 255, 255);
+    /* border-radius: 14rpx; */
+    /* box-shadow: 2px 2px 2px 1px #f3f3f3; */
+    height: 100%;
+    padding: 30rpx 20rpx;
+}
+.comment-card {
+  width: 100%;
+  margin-top: 14rpx;
+  background-color: #f4f4f4;
+  height: auto;
+  border-radius: 9rpx;
+  padding-left: 16rpx;
+  padding-right: 16rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+}
+
+.row {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0rpx 0;
+  box-sizing: border-box;
+}
+.nickname-font {
+  font-size: 22rpx;
+  font-weight: bolder;
+  color: #469c4f;
+  line-height: 28rpx;
+  vertical-align: middle;
+}
+.author-font {
+  font-size: 19rpx;
+  font-weight: bolder;
+  color: gray;
+  vertical-align: middle;
+  line-height: 28rpx;
+}
+.comment-font {
+  line-height: 210%;
+  margin-top: 14rpx;
+  margin-bottom: 14rpx;
+  font-size: 29rpx;
+  word-break:break-all;
+  /* letter-spacing: 1px; */
+  color: #000;
+  text-align: justify;
+  /* display: inline-block; */
+}
+
+.option-row {
+  height: 44rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15rpx 0;
+  box-sizing: border-box;
+}
+.time-font {
+  line-height: 40rpx;
+  font-size: 22rpx;
+  height: 40rpx;
+  color:#c0c4d0
+}
+.count-font {
+  line-height: 40rpx;
+  font-size: 18rpx;
+  height: 40rpx;
+  margin-left: 8rpx;
+  color:#c0c4d0
+}

@@ -1,0 +1,6 @@
+<!--components/ad-comment-list/ad-comment-list.wxml-->
+<view class="ad">
+    <ad-custom wx:if="{{active === 1}}" binderror="customBindError" unit-id="adunit-cd07d4f465af2bf5"></ad-custom>
+    <ad wx:if="{{active === 2}}" unit-id="adunit-3f494e146e4f9c14"></ad>
+</view>
+<van-divider hairline dashed customStyle="margin: 0;"/>

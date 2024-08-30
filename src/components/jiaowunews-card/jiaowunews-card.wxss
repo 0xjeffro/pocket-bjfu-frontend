@@ -1,0 +1,24 @@
+/* components/jiaowunews-card/jiaowunews-card.wxss */
+.row {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding: 0rpx 0;
+    box-sizing: border-box;
+}
+
+.title {
+    font-size: 22rpx;
+    font-weight: 300;
+    color: #666;
+
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    white-space: normal !important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}

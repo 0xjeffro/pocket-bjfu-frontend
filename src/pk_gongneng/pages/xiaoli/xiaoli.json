@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "l-loading": "lin-ui/loading/index",
+    "l-button":"lin-ui/button/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "van-button": "@vant/weapp/button/index"
+  },
+  "navigationBarTitleText": "2021-2022校历"
+}

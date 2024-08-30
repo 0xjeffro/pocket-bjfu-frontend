@@ -1,0 +1,22 @@
+{
+  "usingComponents": {
+    "detail-content": "../../../components/detail-content/detail-content",
+    "detail-comment": "../../../components/detail-comment/detail-comment",
+    "ad-comment-list": "../../../components/ad-comment-list/ad-comment-list",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "l-toast": "lin-ui/toast/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "l-textarea": "lin-ui/textarea/index",
+    "l-button": "lin-ui/button/index",
+    "l-popup": "lin-ui/popup/index",
+    "no-ask-tip": "../../../components/no-ask-tip/no-ask-tip",
+    "shadow-id": "../../../components/shadow-id/shadow-id",
+    "shadow-ad": "../../../components/shadow-ad/shadow-ad"
+  },
+  "navigationBarBackgroundColor": "#f7f7f7",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "详情",
+  "backgroundTextStyle": "dark"
+}

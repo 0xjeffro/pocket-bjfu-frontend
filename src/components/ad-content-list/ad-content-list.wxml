@@ -1,0 +1,6 @@
+<!--components/ad-content-list/ad-content-list.wxml-->
+<view class="row">
+    <view class="card">
+        <ad-custom unit-id="adunit-af1b16ecfcce02e1"></ad-custom>
+    </view>
+</view>

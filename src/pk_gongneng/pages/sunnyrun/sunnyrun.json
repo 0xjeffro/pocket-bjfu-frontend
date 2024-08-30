@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "l-loading": "lin-ui/loading/index",
+    "l-card": "lin-ui/card/index",
+    "l-steps": "lin-ui/steps/index",
+    "l-step": "lin-ui/step/index",
+    "l-icon": "lin-ui/icon/index"
+  },
+  "navigationBarBackgroundColor": "#f7f7f7",
+  "navigationBarTitleText": "阳光长跑"
+}

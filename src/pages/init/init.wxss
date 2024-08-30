@@ -1,0 +1,15 @@
+/* pages/welcome/welcome.wxss */
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contact-button {
+    color: #5abe64 !important;
+    border-color: #5abe64 !important;
+}

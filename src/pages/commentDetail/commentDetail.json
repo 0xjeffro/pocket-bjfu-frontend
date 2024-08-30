@@ -1,0 +1,22 @@
+{
+  "usingComponents": {
+    "van-tag": "@vant/weapp/tag/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "l-toast": "lin-ui/toast/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "l-textarea": "lin-ui/textarea/index",
+    "l-button": "lin-ui/button/index",
+    "l-popup": "lin-ui/popup/index",
+    "comment-in-comment-detail": "../../components/comment-in-comment-detail/comment-in-comment-detail",
+    "no-ask-tip": "../../components/no-ask-tip/no-ask-tip",
+    "shadow-id": "../../components/shadow-id/shadow-id"
+  
+  },
+  "navigationBarBackgroundColor": "#f7f7f7",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "评论详情",
+  "backgroundTextStyle": "dark"
+}

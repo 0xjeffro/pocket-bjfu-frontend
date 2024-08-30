@@ -1,0 +1,55 @@
+/* pages/kechengbiao/kechengbiao.wxss */
+
+.timetable {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 30rpx;
+    color: #847979;
+    margin-top: 20rpx;
+    /* background-color: rgb(246, 246, 246); */
+    background-color: #fff;
+}
+
+.timetable .top {
+    height: 150rpx;
+    width: 60%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timetable .middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* .timetable .middle { margin: 0 20rpx; }
+.timetable .middle span:first-child { font-size: 40rpx;color: #555555; }
+.timetable .middle span:last-child { font-size: 22rpx; }
+.timetable .current-week { font-size: 40rpx !important; } */
+/* .timetable .top .line { width: 40rpx;height: 4rpx;border-radius: 2rpx;background-color: teal; } */
+.timetable .head { display: flex;height: 100rpx;padding-top: 20rpx; margin-left: 40rpx;box-sizing: border-box; }
+.timetable .head .day { flex: 1;text-align: center;}
+.timetable .body { height: 1131rpx;display: flex;flex-direction: column;position: relative; }
+.timetable .row { flex: 1;display: flex;align-items: center;position: relative; }
+.timetable .lesson-number { width: 40rpx;text-align: center; }
+.timetable .body .line { width: 710rpx;margin-left: 40rpx;border-bottom: 1rpx solid rgba(0, 0, 0, 0.1);position: absolute;bottom: 0; }
+.timetable .body .redline { width: 710rpx;margin-left: 40rpx;border-bottom: 1rpx solid rgba(0, 0, 0, 0.1);position: absolute;bottom: 0; border-color: yellowgreen; }
+.timetable .lesson { position: absolute;border-radius: 6rpx;width: 91rpx;font-size: 24rpx; font-weight: 550; word-break:break-all; color: white;display: flex;align-items: center;text-align: center;justify-content: center; }
+
+.timetable .lesson-dialog { background-color: rgba(0, 0, 0, 0.5);position: fixed;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center; }
+.timetable .lesson-dialog .content { width: 70%;font-weight: 500; box-sizing: border-box;padding: 15px;border-radius: 10px;background-color: white; }
+
+.right-nav {
+    padding: 0 10px;
+    line-height: 44px !important;
+    background-color: #fff;
+  }
+
+page {
+    background: #fff;
+}  

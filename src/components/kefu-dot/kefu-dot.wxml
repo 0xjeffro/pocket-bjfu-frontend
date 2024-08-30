@@ -1,0 +1,7 @@
+<!--components/dot/dot.wxml-->
+<view class="dot-container">
+    <label for="kefu-dot">
+        <button hidden id="kefu-dot" open-type="contact"/>
+        <image src='../../static/img/kefu.png' class='kefu-dot-img'></image>
+    </label>
+</view>

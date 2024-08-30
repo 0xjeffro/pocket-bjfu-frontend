@@ -1,0 +1,77 @@
+<comment-in-comment-detail
+  wx:if="{{show}}"
+  number="{{comment.id}}"
+  isAuthor="{{comment.isAuthor}}"
+  nickname="{{comment.nickname}}"
+  time="{{comment.time}}"
+  state="{{comment.state}}"
+  deep="{{comment.deep}}"
+  reply="{{comment.reply}}"
+  commentText="{{comment.commentText}}"
+  contentId="{{comment.contentId}}"
+  isLike="{{comment.isLike}}"
+  nLike="{{comment.nLike}}"
+  action="{{comment.action}}"
+  actionTo="{{comment.actionTo}}"
+>
+</comment-in-comment-detail>
+<view style="width: 100%; height: 20rpx;"></view>
+
+
+<view class="row" style="padding-bottom: 0;" wx:if="{{show}}">
+    <view class="comment-bar">
+        <text class="comment-bar-text">相关回复共{{comments.length}}条</text>
+    </view>
+</view>
+<van-divider hairline customStyle="margin: 0;"/>
+
+<comment-in-comment-detail
+  wx:for="{{comments}}" wx:key="id"
+  number="{{item.id}}"
+  isAuthor="{{item.isAuthor}}"
+  nickname="{{item.nickname}}"
+  time="{{item.time}}"
+  state="{{item.state}}"
+  deep="{{item.deep}}"
+  reply="{{item.reply}}"
+  commentText="{{item.commentText}}"
+  contentId="{{item.contentId}}"
+  isLike="{{item.isLike}}"
+  nLike="{{item.nLike}}"
+  action="{{item.action}}"
+  actionTo="{{item.actionTo}}"
+>
+</comment-in-comment-detail>
+<ad unit-id="adunit-c47463ed4bfba579" ad-type="video" ad-theme="white"></ad>
+<!-- <ad-custom unit-id="adunit-ee25f21967a9c7ef"></ad-custom> -->
+<view style="width: 100%; height: 200rpx;"></view>
+
+<l-popup
+  wx:if="{{ writeCommentShow }}"
+  show="{{ writeCommentShow }}"
+  content-align="top"
+  bind:lintap="onClose"
+>
+  <view class="top-popup">
+    <view style="margin-top: 10rpx;">
+      <l-textarea
+        l-inner-class="textarea-text"
+        border="{{false}}" 
+        placeholder="{{placeholder}}"
+        model:value="{{commentText}}"
+        auto-height="{{true}}"
+        maxlength="300"
+        focus="{{true}}"/>
+    </view>
+    <van-divider hairline customStyle="margin: 0;"/>
+    <view style="width: 100%; margin: 20rpx;" class="popup-row">
+      <l-button l-class="send-button" shape="semicircle" catch:lintap="sendComment">发布</l-button>
+    </view>
+  </view>
+</l-popup>
+
+<l-toast />
+
+<no-ask-tip show="{{noAskTipShow}}" text="保持订阅，消息不错过"></no-ask-tip>
+
+<shadow-id></shadow-id>

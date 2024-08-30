@@ -1,0 +1,19 @@
+{
+  "usingComponents": {
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-picker": "@vant/weapp/picker/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-uploader": "@vant/weapp/uploader/index",
+    "notice": "../../components/notice/notice",
+    "l-message": "lin-ui/message/index",
+    "kefu-dot": "../../components/kefu-dot/kefu-dot"
+  
+  },
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "林里校园"
+}

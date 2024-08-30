@@ -1,0 +1,53 @@
+<!--pages/changyonglianjie/changyonglianjie.wxml-->
+<view wx:if="{{! loadingFail}}">
+    <!-- 加载动画 -->
+    <l-loading
+        l-container-class="l-container"
+        bg-color="#f7f7f7"
+        z-index="776"
+        color="#5abe64"
+        size="large"
+        type="flash"
+        opacity="1"
+        show="{{loadingShow}}"
+        full-screen="{{true}}"
+        custom="{{false}}"
+    >
+    </l-loading>
+
+    <view style="text-align:center">
+        <text class="hint-text">点击卡片即可复制链接到剪贴板</text>
+    </view>
+
+    <!-- 内容 -->
+    <view wx:for="{{linkList}}" wx:key="id" data-url="{{item.url}}" data-id="{{item.id}}" bindtap="copy">
+        <view style="height: 28rpx;"></view>
+        <view>
+            <l-card
+                type="primary"
+                l-class="card-class"
+                l-img-class="right-card" 
+                position="right" 
+                image="/static/img/link.png"
+                title="{{item.title}}">
+                <view class="content">
+                {{item.desc}}
+                </view>
+            </l-card>
+        </view>
+    </view>
+
+    <view style="height: 80rpx;"></view>
+</view>
+
+<van-empty
+  class="custom-image"
+  image="https://img.yzcdn.cn/vant/empty-image-error.png"
+  description="请求超时，请检查网络连接"
+  wx:if="{{loadingFail}}"
+>
+    <l-button type="default" bindtap="loadData">重试</l-button>
+</van-empty>
+
+<van-toast id="van-toast" />
+

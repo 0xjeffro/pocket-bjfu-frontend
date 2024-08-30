@@ -1,0 +1,11 @@
+{
+    "component": true,
+    "usingComponents": {
+        "van-row": "@vant/weapp/row/index",
+        "van-col": "@vant/weapp/col/index",
+        "van-icon": "@vant/weapp/icon/index",
+        "l-album": "lin-ui/album/index",
+        "l-toast": "lin-ui/toast/index",
+        "van-action-sheet": "@vant/weapp/action-sheet/index"
+    }
+}

@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "l-loading": "lin-ui/loading/index",
+    "l-card": "lin-ui/card/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "van-button": "@vant/weapp/button/index",
+    "l-button":"lin-ui/button/index",
+    "van-toast": "@vant/weapp/toast/index"
+  },
+  "navigationBarTitleText": "常用链接"
+}

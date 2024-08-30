@@ -1,0 +1,14 @@
+/* pages/jiaowunews/jiaowunews.wxss */
+.card {
+    margin: 10rpx auto !important;
+}
+
+.title {
+    font-size: 26rpx !important;
+    font-weight: 500;
+    margin-top: 10rpx;
+}
+.content {
+    font-size: 20rpx;
+    color: #666;
+}

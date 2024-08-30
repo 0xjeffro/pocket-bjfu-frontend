@@ -1,0 +1,56 @@
+<!--components/detail-comment/detail-comment.wxml-->
+<view class="row">
+    <view class="card">
+        <!-- 身份标识 -->
+        <van-row>
+            <van-col span="12" offset="1">
+                <view style="height: 28rpx;">
+                    <text class="nickname-font">{{nickname}}</text>
+                    <text class="author-font">{{authorTag}}</text>
+                </view>
+            </van-col>
+        </van-row>
+        <!-- 内容 -->
+        <van-row>
+            <van-col span="22" offset="1"><text class="comment-font" bindtap="writeComment" bindlongpress="copyCommentText" data-text="{{commentText}}">{{state == 1 ? commentText : '内容涉嫌违规，系统自动屏蔽'}}</text>
+            </van-col>
+        </van-row>
+        <!-- 操作栏 -->
+        <van-row>
+            <van-col offset="1" span="21">
+                <view class="option-row">
+                    <view class="time-font">{{time}}</view>
+                    <view class="time-font" style="margin-left: 40rpx;" bindtap="writeComment">回复</view>
+                    <van-icon name="{{likeIcon}}" color="{{likeColor}}" size="24rpx" bindtap="likeClick" style="margin-left: 40rpx;" class='{{animationType}}'/>
+                    <view class="count-font" bindtap="likeClick">{{nLike_d}}</view>
+                </view>
+            </van-col>
+        </van-row>
+         <!-- 二级评论 -->
+        <van-row wx:if="{{comments_d.length !== 0}}">
+            <van-col offset="1" span="22">
+                <view class="comment-card">
+                    <view
+                        style="width: 100%"
+                        wx:for="{{comments_d}}" wx:key="id"
+                        bindtap="toCommentDetail"
+                        bindlongpress="copyCommentText"
+                        data-text="{{item.commentText}}"
+                    >
+                        <text class="comment2-font" style="color: #208fd0">{{item.nickname}}</text>
+                        <text class="comment2-font" style="color: #208fd0">{{item.authorTag}}</text>
+                        <text class="comment2-font">{{item.reply === number ? '': ' ' + item.action + ' '}}</text>
+                        <text class="comment2-font" style="color: #208fd0">{{item.reply === number ? '': item.actionTo}}</text>
+                        <text class="comment2-font">：</text>
+                        <text class="comment2-font">{{item.state == 1 ? item.commentText : '内容涉嫌违规，，系统自动屏蔽'}}</text>
+                    </view>
+                    <view style="width: 100%; height:40rpx;" wx:if="{{moreInfo !== ''}}" bindtap="toCommentDetail">
+                        <text class="more-comment-font" style="color: #208fd0;display:inline-block;vertical-align:middle;">{{moreInfo}}</text>
+                        <van-icon name="arrow" size="18rpx" style="display:inline-block;vertical-align:middle" color="#9b9b9b"/>
+                    </view>
+                </view>
+            </van-col>
+        </van-row>
+    </view>
+</view>
+<van-divider hairline dashed customStyle="margin: 0;"/>

@@ -1,0 +1,11 @@
+<!--components/jiaowunews-card/jiaowunews-card.wxml-->
+<view>
+    <view class="row" style="width: 80%; margin-left: 30rpx;margin-top: 20rpx;">
+        <text class="title">{{lis[0].title}}</text>
+    </view>
+    
+    <view class="row" style="width: 80%;margin-left: 30rpx; margin-top: 20rpx;">
+        <text class="title">{{lis[1].title}}</text>
+    </view>
+
+</view>

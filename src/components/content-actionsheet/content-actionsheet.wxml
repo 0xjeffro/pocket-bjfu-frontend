@@ -1,0 +1,13 @@
+<!--components/content-actionsheet/content-actionsheet.wxml-->
+
+<van-action-sheet
+  show="{{ showAction }}"
+  description="{{ description }}"
+  actions="{{ actions }}"
+  overlay="{{ true }}"
+  cancel-text="取消"
+  style="font-weight: light;"
+  bind:close="onClose"
+  bind:select="onSelect"
+  bind:cancel="onClose"
+/>

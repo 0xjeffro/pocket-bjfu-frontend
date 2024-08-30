@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "l-icon": "lin-ui/icon/index",
+    "l-checkbox-group": "lin-ui/checkbox-group/index",
+    "l-checkbox": "lin-ui/checkbox/index",
+    "l-button": "lin-ui/button/index",
+    "content-card": "/components/content-card/content-card",
+    "l-loadmore": "lin-ui/loadmore/index",
+    "paiming-card": "/components/paiming-card/paiming-card"
+  },
+  "navigationBarBackgroundColor": "#f7f7f7",
+  "navigationBarTitleText": "成绩查询"
+}

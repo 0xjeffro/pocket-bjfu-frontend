@@ -1,0 +1,17 @@
+<!--components/no-ask-tip/no-ask-tip.wxml-->
+
+<view class="bg" wx:if="{{show}}">
+  <view class="body" style="top: {{top}}">
+    <view class="title">{{text}}</view>
+    <view class="btns">
+      <view class="cancel btn">取消</view>
+      <view class="ok btn">允许</view>
+      <image src="/static/img/pointer.png" class="pointer permit"></image>
+    </view>
+    <view class="tip">
+      <view class="circle"></view>
+      <image src="/static/img/pointer.png" class="pointer check"></image>
+      <view class="text">总是保持以上选择，不在询问</view>
+    </view>
+  </view>
+</view>

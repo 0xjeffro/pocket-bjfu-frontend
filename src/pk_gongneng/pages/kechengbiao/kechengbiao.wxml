@@ -1,0 +1,46 @@
+<!--pages/kechengbiao/kechengbiao.wxml-->
+<view>
+<van-tabs
+    nav-class="nav"
+    tab-class="special-tab"
+    tab-active-class="special-tab-active"
+    active="{{ currentWeek - 1 }}"
+    color="#00b386"
+    title-active-color="#00b386"
+    bind:click="clickTab"
+>
+    <van-tab wx:for="{{zc}}" title="第{{item}}周" wx:key="*this"></van-tab>
+</van-tabs>
+   
+
+<view class="timetable">
+    <view class="head">
+		<view class="day" wx:for="{{weekDays}}" wx:key="*this">
+            <text style="font-size: 25rpx;">{{ item }}\n{{weekDate[index]}}</text>
+        </view>
+    </view>
+    <view class="body">
+		<view wx:for="{{classNumber}}" wx:key="*this" class="row">
+            <span class="lesson-number">{{ item }}</span>
+			<view class="{{ item === '5' || item === '9' ? 'redline': 'line'}}"></view>
+        </view>
+		<view
+			wx:for="{{lessons}}"
+			wx:key="kcmc"
+			class="lesson"
+            style="{{item.style}}"
+            data-kcsj="{{item.kcsj}}"
+            data-kcmc="{{item.kcmc}}"
+            data-jsmc="{{item.jsmc}}"
+            data-kkzc="{{item.kkzc}}"
+            data-jsxm="{{item.jsxm}}"
+            bindtap="handleViewLessonInfo"
+		>{{ item.kcmcShort }}@{{ item.jsmc }}
+        </view>
+    </view>
+    <view wx:if="{{isViewingLessonInfo}}" class="lesson-dialog" bindtap="closeLessonView">
+		<view class="content" style="white-space:pre-wrap">{{ viewingLessonInfo }}</view>
+	</view>
+</view>
+</view>
+<l-toast />

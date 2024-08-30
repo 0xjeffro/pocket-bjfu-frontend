@@ -1,0 +1,13 @@
+<!--components/notice/notice.wxml-->
+<van-notice-bar
+    wx:if="{{show}}"
+    left-icon="{{leftIcon}}"
+    color="{{color}}"
+    background="{{background}}"
+    scrollable="{{scrollable}}"
+    mode="{{mode}}"
+    delay="{{delay}}"
+    speed="{{speed}}"
+    text="{{text}}"
+    bindtap="onClick"
+/>

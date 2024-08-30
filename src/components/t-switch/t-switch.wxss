@@ -1,0 +1,47 @@
+/* components/t-switch/t-switch.wxss */
+.switch {
+    width: 220rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    border-radius: 10rpx;
+    background-color: #eee;
+    color: #999;
+    font-size: 24rpx;
+    display: flex;
+    position: relative;
+    
+}
+.switch .left, .switch .right {
+    flex: 1;
+    text-align: center;
+    /* cursor: pointer; */
+    position: relative;
+}
+.switch .back {
+    position: absolute;
+    margin: 2px 0;
+    left: 4rpx;
+    width:  106rpx;
+    height: 52rpx;
+    line-height: 52rpx;
+    border-radius: 8rpx;
+    background-color: white;
+}
+.switch .back.left-to-right {
+    animation: 0.2s ease left-to-right;
+}
+.switch .back.right-to-left {
+    animation: 0.2s ease right-to-left;
+}
+.switch .active {
+    color: #333;
+    font-weight: 500;
+}
+@keyframes left-to-right {
+    0% { left: 4rpx; }
+    100% { left: 110rpx; }
+}
+@keyframes right-to-left {
+    0% { left: 110rpx; }
+    100% { left: 4rpx; }
+}

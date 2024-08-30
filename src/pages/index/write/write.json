@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "l-textarea": "lin-ui/textarea/index",
+    "van-uploader": "@vant/weapp/uploader/index",
+    "l-button": "lin-ui/button/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-button": "@vant/weapp/button/index",
+    "l-toast": "lin-ui/toast/index",
+    "no-ask-tip": "../../../components/no-ask-tip/no-ask-tip"
+  },
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": ""
+}

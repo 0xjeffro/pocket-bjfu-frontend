@@ -1,0 +1,70 @@
+{
+    "pages": [
+        "pages/init/init",
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/gongneng/gongneng",
+        "pages/start/start",
+        "pages/index/write/write",
+        "pages/mycontent/mycontent",
+        "pages/myfav/myfav",
+        "pages/mysearch/mysearch",
+        "pages/index/detail/detail",
+        "pages/commentDetail/commentDetail",
+        "pages/webview/webview"
+    ],
+    "subpackages": [
+        {
+            "root": "pk_gongneng",
+            "pages": [
+                "pages/kongjiaoshi/kongjiaoshi",
+                "pages/changyonglianjie/changyonglianjie",
+                "pages/sunnyrun/sunnyrun",
+                "pages/chengji/chengji",
+                "pages/xiaoli/xiaoli",
+                "pages/jiaowunews/jiaowunews",
+                "pages/jiaowunews/snapshot/snapshot",
+                "pages/kechengbiao/kechengbiao"
+            ]
+        }
+    ],
+    "networkTimeout": {
+        "request": 8000,
+        "downloadFile": 8000
+    },
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#f7f7f7",
+        "navigationBarTitleText": "",
+        "navigationBarTextStyle": "black",
+        "backgroundColor": "#f7f7f7"
+    },
+    "tabBar": {
+        "custom": true,
+        "color": "#333",
+        "selectedColor": "#cdcdcd",
+        "borderStyle": "black",
+        "backgroundColor": "#ffffff",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "iconPath": "/static/img/shouye.png",
+                "selectedIconPath": "/static/img/shouye-active.png",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/gongneng/gongneng",
+                "iconPath": "/static/img/gongneng.png",
+                "selectedIconPath": "/static/img/gongneng-active.png",
+                "text": "功能"
+            }
+        ]
+    },
+    "plugins": {
+    },
+    "usingComponents": {
+        "van-notify": "@vant/weapp/notify/index"
+    },
+    
+    "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,8 @@
+<!--components/t-switch/t-switch.wxml-->
+<view style="width: 250rpx;">
+    <view class="switch">
+        <view class="{{ back }}" style="{{backStyle}}"></view>
+        <span class="{{left}}" bindtap="handleLeft">默认</span>
+        <span class="{{right}}" bindtap="handleRight">最新</span>
+    </view>
+</view>

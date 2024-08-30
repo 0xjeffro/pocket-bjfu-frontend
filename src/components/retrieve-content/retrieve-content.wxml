@@ -1,0 +1,72 @@
+<!--components/retrieve-content/retrieve-content.wxml-->
+<view class="row">
+    <view class="card" wx:if="{{!skeletonShow}}" hover-class='hover-style' hover-stay-time="50" bindtap="toDetail">
+      <!-- 第一行，显示楼层和时间 -->
+      <van-row>
+        <van-col offset="1">
+          <view class="title-font"># {{number}}</view>
+        </van-col>
+        <van-col span="5" offset="0">
+            <image src="{{decorationUrl_d}}" style="width: 48rpx; height: 48rpx; margin-left: 10rpx;"></image>
+          </van-col>
+        <van-col style="float: right;">
+          <view class="time-font">{{time_d}}</view>
+        </van-col>
+      </van-row>
+      <!-- 支撑 -->
+      <van-row>
+        <view style="height: 18rpx;"></view>
+      </van-row>
+      <!-- 第二行，p显示内容 -->
+      <van-row>
+        <van-col span="22" offset="1"><text class="content-font" user-select="{{true}}">{{contentText}}</text>
+        </van-col>
+      </van-row>
+      <van-row>
+        <van-col span="23" offset="1">
+          <view style="margin-left: 10rpx; margin-top: 10rpx;">
+            <l-album 
+              urls="{{urls}}"
+              custom-row-number="{{true}}"
+              every-row-number="{{3}}"
+              wx:if="{{urls.length === 3}}"
+            >
+            </l-album>
+            <l-album 
+              urls='{{urls}}'
+              wx:if="{{urls.length !== 3}}"
+            >
+            </l-album>
+          </view>
+        </van-col>
+      </van-row>
+      <!-- 支撑 -->
+      <van-row>
+        <view style="height: 15px;"></view>
+      </van-row>
+      <!-- 操作栏 -->
+      <van-row>
+        <van-col offset="1" span="21">
+          <view class="option-row">
+            <van-icon name="like" color="{{likeColor}}" size="40rpx" bindtap="likeClick" style="margin-left: 0rpx;" class='{{animationType}}'/>
+            <view class="count-font" bindtap="likeClick">{{nLike_d}}</view>
+            
+            <van-icon name="comment" color="#c0c4d0" size="40rpx" style="margin-left: 80rpx;"/>
+            <view class="count-font">{{nComment_d}}</view>
+          </view>
+        </van-col>
+        <van-col>
+          <van-icon wx:if="{{! isFav_d}}" bindtap="favClick" class="t-icon t-icon-shoucang" style="width: 38rpx; height: 38rpx;"/>
+          <van-icon wx:if="{{isFav_d}}" bindtap="favClick" class="t-icon t-icon-shoucang-select" style="width: 38rpx; height: 38rpx;"/>
+        </van-col>
+      </van-row> 
+    </view>
+    <view class="card" style="padding: 15rpx 30rpx 35rpx 30rpx;" wx:if="{{skeletonShow}}">
+        <l-skeleton 
+        loading="{{skeletonShow}}"
+        rows="3"
+        ></l-skeleton>
+    </view>
+</view>
+
+<l-toast />

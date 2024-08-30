@@ -1,0 +1,40 @@
+<!--pages/index/write/write.wxml-->
+<view>
+    <van-row>
+        <l-button
+            size="mini"
+            style="float: right; margin-right: 16px; margin-top: 10px;"
+            bg-color="#07c160"
+            bindtap="send">
+            <text style="font-weight: 600;">发送</text>
+        </l-button>
+    </van-row>
+    <van-row>
+        <view class="textarea-container">
+            <view>
+                <l-textarea
+                    l-class="textarea"
+                    l-inner-class="textarea-text"
+                    border="{{false}}" 
+                    placeholder="说说你的想法吧..."
+                    model:value="{{contentText}}"
+                    auto-height="{{true}}"
+                    maxlength="1000"
+                    focus="{{true}}"/>
+            </view>
+        </view>
+    </van-row>
+    <van-row>
+    <view  class="uploader-container">
+        <van-uploader
+            file-list="{{ fileList }}"
+            bind:delete="delete"
+            multiple="{{true}}"
+            max-count="6"
+            image-fit="aspectFill"
+            bind:after-read="afterRead" />
+    </view>
+    </van-row>
+</view>
+<l-toast />
+<no-ask-tip show="{{noAskTipShow}}" text="保持订阅，消息不错过"></no-ask-tip>

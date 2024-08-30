@@ -1,0 +1,56 @@
+/* pages/index/detail/detail.wxss */
+.card{
+    width: 700rpx;
+    background: rgb(255, 255, 255);
+    border-radius: 26rpx;
+    box-shadow: 2px 2px 2px 1px #f3f3f3;
+    height: 100%;
+    padding: 30rpx 0;
+}
+
+.row {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15rpx 0;
+  box-sizing: border-box;
+}
+.comment-bar {
+    width: 750rpx;
+    height: 80rpx;
+    background: rgb(255, 255, 255);
+}
+.comment-bar-text {
+    margin-left: 30rpx;
+    line-height: 80rpx;
+    font-size: 26rpx;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+.textarea-text {
+    height: 200rpx !important;
+}
+.send-button {
+    background-color: #5abe64 !important;
+    margin: auto !important;
+}
+.popup-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* padding: 15rpx 20rpx; */
+    box-sizing: border-box;
+}
+
+.top-popup{
+    width: 100%;
+    background: #fff;
+    height: 424rpx;
+    overflow: hidden;
+    border-bottom-right-radius: 24rpx;
+    border-bottom-left-radius: 24rpx;
+}

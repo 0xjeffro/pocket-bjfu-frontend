@@ -1,0 +1,126 @@
+<!--pages/start/start.wxml-->
+<view>
+<view style="height: 140rpx;">
+    <notice component="start-2" wx:if="{{ identityIndex === 2 }}"></notice>
+</view>
+<view class="row">
+ <image src='{{ logo }}' style="width: 100px; height: 100px;"></image>
+</view>
+<van-cell title="身份" value="{{identity}}" is-link border="{{ true }}" bind:click="showidentityPicker"/>
+<view wx:if="{{identityIndex === 0 || identityIndex === 1}}">
+    <van-field
+        label="学号"
+        model:value="{{ studentNumber }}"
+        placeholder="请输入学号"
+        border="{{ false }}"
+        disabled="{{!canUse}}"
+    >
+        <van-icon slot="left-icon" color="#5abe64" name="arrow" />
+    </van-field>
+    <van-field
+        label="密码"
+        type="password"
+        model:value="{{ password }}"
+        placeholder="密码与教务系统一致"
+        border="{{ false }}"
+        disabled="{{!canUse}}"
+        bind:focus="passwordInputFocus"
+        bind:blur="passwordInputBlur"
+    >
+        <van-icon slot="left-icon" color="#5abe64" name="arrow" />
+    </van-field>
+    <van-field
+        label="验证码"
+        model:value="{{ validateCodeForm }}"
+        placeholder="请输入验证码"
+        border="{{ false }}"
+        disabled="{{!canUse}}"
+        use-button-slot
+    >
+        <image slot="right-icon" bindtap="randomValidateCode" style="width: 110rpx; height: 30rpx;" src='data:image/png;base64,{{validateCodeMock.base64}}'></image>
+        <van-icon slot="left-icon" color="#5abe64" name="arrow"/>
+    </van-field>
+</view>
+<view wx:if="{{identityIndex === 2}}">
+    <van-field
+        label="姓名"
+        model:value="{{ studentName }}"
+        placeholder="请输入姓名"
+        disabled="{{!canUse}}"
+        border="{{ false }}"
+    >
+        <van-icon slot="left-icon" color="#5abe64" name="arrow" />
+    </van-field>
+    <van-field
+        label="考生号"
+        model:value="{{ studentName }}"
+        model:value="{{ ksh }}"
+        placeholder="广东考生请在考生号前加2144"
+        disabled="{{!canUse}}"
+        border="{{ false }}"
+    >
+        <van-icon slot="left-icon" color="#5abe64" name="arrow" />
+    </van-field>
+    <van-field
+        label="身份证号"
+        model:value="{{ sfzh }}"
+        placeholder="请输入身份证号"
+        disabled="{{!canUse}}"
+        border="{{ false }}"
+    >
+        <van-icon slot="left-icon" color="#5abe64" name="arrow" />
+    </van-field>
+    <van-field
+        label="验证码"
+        model:value="{{ validateCodeForm }}"
+        placeholder="请输入验证码"
+        border="{{ false }}"
+        disabled="{{!canUse}}"
+        use-button-slot
+    >
+        <image slot="right-icon" bindtap="randomValidateCode" style="width: 110rpx; height: 30rpx;" src='data:image/png;base64,{{validateCodeMock.base64}}'></image>
+        <van-icon slot="left-icon" color="#5abe64" name="arrow"/>
+    </van-field>
+</view>
+
+
+
+
+<view class="row">
+    <van-button type="primary" block style="margin-top: 40px; width:360rpx !important;" color="#5abe64" disabled="{{!canUse}}" bindtap="login">{{buttonText}}</van-button>
+</view>
+<view class="row" style="margin-top: 110rpx">
+    <span class="notice-font">林里校园小程序由学生开发及维护。
+        </span>
+</view>
+<view class="row" style="margin-top: 12px">
+    <span class="notice-font">学号密码信息仅用于身份验证及查询服务，
+        </span>
+</view>
+<view class="row" style="margin-top: 4px">
+    <span class="notice-font">
+        林里校园服务器不直接存储账号密码等个人信息。</span>
+</view>
+<view class="row" style="margin-top: 12px">
+    <span class="notice-font">
+        小程序仅作信息展示，所有信息以学校官方渠道为准。</span>
+</view>
+<view style="height: 200rpx;"></view>
+</view>
+
+<van-popup
+    show="{{identityPickerShow}}"
+    bind:close="identityPickerOnClose"
+    position="bottom"
+    >
+    <van-picker
+    columns="{{ identityList }}"
+    default-index="{{identityIndex}}"
+    show-toolbar="{{true}}"
+    bind:cancel="identityPickerOnCancel"
+    bind:confirm="identityPickerOnConfirm"
+    />
+</van-popup>
+<kefu-dot></kefu-dot>
+
+<l-message />

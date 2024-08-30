@@ -1,0 +1,7 @@
+<!--components/jiaowunews-card/jiaowunews-card.wxml-->
+<view>
+    <view class="row" style="width: 80%; margin-left: 30rpx;margin-top: 20rpx;">
+        <text class="kaoshi-info" style="margin-left: 22rpx;">{{msg}}</text>
+    </view>
+
+</view>

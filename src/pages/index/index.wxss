@@ -1,0 +1,22 @@
+/**index.wxss**/
+@import '../../static/css/animate.wxss';
+.row {
+  /* display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center; */
+  padding: 15rpx 20rpx;
+  box-sizing: border-box;
+}
+.success-message {
+  background-color: #5abe80 !important;
+}
+.send-button-text {
+  color: #5c9b05 !important;
+}
+.fav-button-text {
+  color: #ed6a0c !important;
+}
+page {
+  background-color: #f7f7f7;
+} 

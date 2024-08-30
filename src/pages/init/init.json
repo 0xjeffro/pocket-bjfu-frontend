@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "l-toast": "lin-ui/toast/index",
+    "l-button": "lin-ui/button/index"
+  }
+}

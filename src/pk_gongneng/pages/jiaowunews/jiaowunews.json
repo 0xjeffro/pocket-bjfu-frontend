@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "l-loading": "lin-ui/loading/index",
+    "l-card": "lin-ui/card/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "van-button": "@vant/weapp/button/index",
+    "l-button":"lin-ui/button/index",
+    "l-toast": "lin-ui/toast/index",
+    "l-loadmore": "lin-ui/loadmore/index"
+  },
+  "navigationBarBackgroundColor": "#f7f7f7",
+  "navigationBarTitleText": "教务快讯"
+}

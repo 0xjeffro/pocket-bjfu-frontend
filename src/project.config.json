@@ -1,0 +1,160 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "lazyloadPlaceholderEnable": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "useIsolateContext": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "disableUseStrict": false,
+    "showES6CompileOption": false,
+    "useCompilerPlugins": false,
+    "minifyWXML": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.13.0",
+  "appid": "wxa327e268cec27fe7",
+  "projectname": "pocketBFU",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "scripts": {},
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/gongneng/gongneng",
+          "pathName": "pages/gongneng/gongneng",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/wode/wode",
+          "pathName": "pages/wode/wode",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/xiaoli/xiaoli",
+          "pathName": "pages/xiaoli/xiaoli",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/start/start",
+          "pathName": "pages/start/start",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/changyonglianjie/changyonglianjie",
+          "pathName": "pages/changyonglianjie/changyonglianjie",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/sunnyrun/sunnyrun",
+          "pathName": "pages/sunnyrun/sunnyrun",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/kongjiaoshi/kongjiaoshi",
+          "pathName": "pages/kongjiaoshi/kongjiaoshi",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/chengji/chengji",
+          "pathName": "pages/chengji/chengji",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/kechengbiao/kechengbiao",
+          "pathName": "pages/kechengbiao/kechengbiao",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/jiaowunews/jiaowunews",
+          "pathName": "pages/jiaowunews/jiaowunews",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/write/write",
+          "pathName": "pages/index/write/write",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/myfav/myfav",
+          "pathName": "pages/myfav/myfav",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/mysearch/mysearch",
+          "pathName": "pages/mysearch/mysearch",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/detail/detail",
+          "pathName": "pages/index/detail/detail",
+          "query": "id=72",
+          "scene": null
+        },
+        {
+          "name": "pages/init/init",
+          "pathName": "pages/init/init",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

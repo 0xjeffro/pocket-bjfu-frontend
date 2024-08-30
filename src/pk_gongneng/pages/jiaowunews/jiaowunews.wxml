@@ -1,0 +1,37 @@
+<!--pages/jiaowunews/jiaowunews.wxml-->
+<view>
+    <!-- 内容 -->
+    <l-loadmore show="{{loadingShow}}" 
+          type="{{loadingType}}"
+          loading-text="加载中..."
+          end-text="没有啦"
+          line="{{true}}" 
+          >
+        <view slot="content">
+            <view
+                wx:for="{{lis}}"
+                wx:key="id"
+                bindtap="toSnapShot"
+                data-url="{{item.url}}"
+                data-pic_url="{{item.pic_url}}"
+                data-title="{{item.title}}">
+                <view style="height: 28rpx;"></view>
+                <view>
+                    <l-card type="cover"
+                        l-class="card"
+                        l-title-class="title"
+                        image="{{item.pic_url}}"
+                        image-mode="aspectFill"
+                        title="{{item.title}}">
+                        <view class="content">
+                            发布时间：{{item.time}}
+                        </view>
+                    </l-card>
+                </view>
+            </view>
+        </view>
+    </l-loadmore>
+    <view style="height: 80rpx;"></view>
+</view>
+
+<l-toast />

@@ -1,0 +1,2 @@
+<!--pages/jiaowunews/snapshot/snapshot.wxml-->
+<image mode="widthFix" src="{{pic_url}}" style="width: 100%;"></image>

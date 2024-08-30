@@ -1,0 +1,6 @@
+<!--pages/welcome/welcome.wxml-->
+<view class="col" style="margin-top: 900rpx;">
+    <l-button size="large" plain l-class="contact-button" open-type="contact">联系客服</l-button>
+    <l-button size="large" bg-color="#5abe64" style="margin-top: 30rpx;" bindtap="refresh">清除缓存</l-button>
+</view>
+<l-toast />

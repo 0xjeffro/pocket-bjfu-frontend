@@ -1,0 +1,4 @@
+<!--components/dot/dot.wxml-->
+<view class="dot-container" bindtap="toWrite">
+    <image src='../../static/img/write.png' class='dot-img'></image>
+</view>

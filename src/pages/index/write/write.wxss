@@ -1,0 +1,23 @@
+/* pages/index/write/write.wxss */
+.textarea-container {
+    margin-top: 30rpx;
+    padding-top: 30rpx;
+    padding-bottom: 10rpx;
+    border-radius: 10px;
+}
+
+.uploader-container {
+    margin-top: 30rpx;
+    padding-top: 10rpx;
+    padding-bottom: 10rpx;
+    border-radius: 10px;
+    padding-left: 30rpx;
+}
+.textarea {
+}
+.textarea-text {
+    /* height: 200rpx !important; */
+}
+page {
+    background: #fff;
+} 

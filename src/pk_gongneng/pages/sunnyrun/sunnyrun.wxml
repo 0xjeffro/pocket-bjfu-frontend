@@ -1,0 +1,74 @@
+<!--pages/sunnyrun/sunnyrun.wxml-->
+<view class="row">
+    <view class="card" style="width: 690rpx; height: 100%;" hover-class='wsui-btn__hover_list' hover-stay-time="50">
+        <view class="row-banner" style="width:100%; height: 80rpx;line-hright: 50rpx;">
+            <view class="light-block" style="margin-top: 40rpx;margin-left: 30rpx; margin-right: 10rpx;"></view>
+            <text style="margin-left: 10rpx; line-height: 100rpx; font-size: 29rpx; font-weight: 600;">课程信息</text>
+        </view>
+        <view class="row-banner" style="width:100%; height: 70rpx;line-hright: 50rpx;">
+            <text class="text-label">学年学期： </text>
+            <text class="text-content">{{xnxq}}</text>
+        </view>
+        <view class="row-banner" style="width:100%; height: 70rpx;line-hright: 50rpx;">
+            <text class="text-label">学号： </text>
+            <text class="text-content">{{xh}}</text>
+        </view>
+        <view class="row-banner" style="width:100%; height: 70rpx;line-hright: 50rpx;">
+            <text class="text-label">任课教师： </text>
+            <text class="text-content">{{teacher}}</text>
+        </view>
+        <view class="row-banner" style="width:100%; height: 30rpx;">
+        </view>
+    </view>
+</view>
+<view class="row">
+    <view class="card" style="width: 690rpx; height: 100%;" hover-class='wsui-btn__hover_list' hover-stay-time="50">
+        <view class="row-banner" style="width:100%; height: 80rpx;line-hright: 50rpx;">
+            <view class="light-block" style="margin-top: 40rpx;margin-left: 30rpx; margin-right: 10rpx;"></view>
+            <text style="margin-left: 10rpx; line-height: 100rpx; font-size: 29rpx; font-weight: 600;">有效次数</text>
+        </view>
+        <view class="row-banner" style="width:100%; height: 70rpx;line-hright: 50rpx;">
+            <text class="text-label">打卡跑步： </text>
+            <text class="text-content">{{validTimesNormal}}次</text>
+        </view>
+        <view class="row-banner" style="width:100%; height: 70rpx;line-hright: 50rpx;">
+            <text class="text-label">APP跑步： </text>
+            <text class="text-content">{{validTimesAPP}}次</text>
+            <!-- <text style="margin-left: 50rpx; line-height: 80rpx; font-size: 25rpx; font-weight: 400; color:green;">今日 +1</text> -->
+        </view>
+        <view class="row-banner" style="width:100%; height: 30rpx;">
+        </view>
+    </view>
+</view>
+
+<view class="row">
+    <view  class="card" style="width: 690rpx; height: 100%;" hover-class='wsui-btn__hover_list' hover-stay-time="50">
+        <view class="row-banner" style="width:100%; height: 80rpx;line-height: 50rpx; margin-bottom: 20rpx;">
+            <view class="light-block" style="margin-top: 40rpx;margin-left: 30rpx; margin-right: 10rpx;"></view>
+            <text style="margin-left: 10rpx; line-height: 100rpx; font-size: 29rpx; font-weight: 600;">跑步记录</text>
+        </view>
+        <view style="text-align:center" wx:if="{{loadingShow}}">
+            <text style="font-size: 24rpx; color: #666666">加载中...</text>
+        </view>
+        <view style="text-align:center" wx:if="{{loadingErrorShow}}" bindtap="bindReload">
+            <text style="font-size: 24rpx; color: #666666">点击重新加载</text>
+        </view>
+        <view style="text-align:center" wx:if="{{noDataShow}}">
+            <text style="font-size: 24rpx; color: #666666">无记录</text>
+        </view>
+        <l-steps wx:for="{{achievements}}" wx:key="id" direction="column" active-index="10000" dot color="{{item.dotColor}}">
+            <l-step title="{{item.date}} {{item.domain}}">
+                <view class="describe-container" slot="describe">
+                    打卡跑步 · {{item.t_speed}}m/s · {{item.mileage}}m · {{item.t_isValid}}
+                </view>
+            </l-step>
+            <l-step style="height: 0rpx;" wx:if="{{item.showGhostDot}}">
+            </l-step>
+        </l-steps>
+        
+        <view class="row-banner" style="width:100%; height: 30rpx;">
+        </view>
+    </view>
+    
+</view>
+

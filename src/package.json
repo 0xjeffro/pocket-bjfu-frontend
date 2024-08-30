@@ -1,0 +1,19 @@
+{
+  "name": "miniprogram-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vant/weapp": "^1.6.9",
+    "base64-utf8": "^0.1.8",
+    "eval5": "^1.4.6",
+    "iny-bus": "^2.0.0",
+    "lin-ui": "^0.9.4",
+    "umtrack-wx": "^2.6.2"
+  }
+}
